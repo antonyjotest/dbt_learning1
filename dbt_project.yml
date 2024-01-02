@@ -50,6 +50,10 @@ models:
       +materialized: table
       schema: transform
 
+    presentation:
+      +materialized: table
+      schema: presentation
+
 
 
 
