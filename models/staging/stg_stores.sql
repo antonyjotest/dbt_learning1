@@ -1,4 +1,4 @@
 WITH stores_data AS (
-    SELECT * FROM dbt.sales.stores
+    SELECT * FROM {{ source('sales_source_data', 'stores') }}
 )
 SELECT * FROM stores_data

@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: sales_source_data
+    database: dbt
+    schema: sales
+    tables:
+      - name: customers
+      - name: orders
+      - name: order_items
+      - name: staffs
+      - name: stores
+
+  - name: production_source_data
+    database: dbt
+    schema: production
+    tables:
+      - name: brands
+      - name: categories
+      - name: products
+      - name: stocks

@@ -1,5 +1,5 @@
 WITH categories_data AS (
-    SELECT * FROM dbt.production.categories
+    SELECT * FROM {{ source('production_source_data', 'categories') }}
 )
 
 SELECT * FROM categories_data

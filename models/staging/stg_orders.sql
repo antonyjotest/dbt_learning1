@@ -1,5 +1,5 @@
 WITH orders_data AS (
-    SELECT * FROM dbt.sales.orders
+    SELECT * FROM {{ source('sales_source_data', 'orders') }}
 )
 
 SELECT * FROM orders_data
