@@ -44,7 +44,15 @@ product_all_details AS (
 order_item_all_details AS (
     SELECT 
         oi.*,
-        p.*
+        p.product_name AS product_name,
+        p.list_price AS product_list_price,
+        p.model_year AS model_year,
+        p.store_id AS store_id,
+        p.quantity AS product_avail_quantity,
+        p.brand_id AS brand_id,
+        p.brand_name AS brand_name,
+        p.category_id AS category_id,
+        p.category_name AS category_name
         FROM order_item_details AS oi
         LEFT JOIN product_all_details AS p using(product_id)
 )
