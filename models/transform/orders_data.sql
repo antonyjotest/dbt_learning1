@@ -19,9 +19,9 @@ order_details AS (
 ordered_details AS (
     SELECT 
         od.*,
-        cd.first_name,
-        sta.first_name,
-        sto.store_name
+        cd.first_name AS customer_name,
+        sta.first_name AS staff_name,
+        sto.store_name AS store_name
         FROM order_details AS od
         LEFT JOIN customer_details AS cd using(customer_id)
         LEFT JOIN staff_details AS sta using(staff_id)
